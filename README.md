@@ -1,4 +1,6 @@
-# Housing_Price_Prediction_In_Beijing
+# Hi Everyone I AM LAKHENDRA KR DAS I HAVE COMPLETED MY BHARAT INTERN TASK 1 (HOUSE PRICE PREDICTION).
+
+# Housing_Price_Prediction
 
 ## Installation Guide
 1. Clone or Fork the Project
@@ -20,12 +22,11 @@
     D. Tools and Libraries
 2. [Data Collection](https://www.kaggle.com/ruiqurm/lianjia)
 3.  Generic Flow Of Project
-4. [EDA](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Housing_Price_Predication_Project_EDA.ipynb)<br>
     A. Data Cleaning<br>
     B. Feature Engineering<br>
     C. Data Normalization
-5. [Choosing Best ML Model](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Machine_Learning_Model_Creation.ipynb)
-6. [Model Creation](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Machine_Learning_Model_Creation.ipynb)
+5. [Choosing Best ML Model](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Mae_Learning_Model_Creation.ipynb)
+6. [Model Creation](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Machinearning_Model_Creation.ipynb)
 7. Model Deployment
 8. Model Conclusion
 9. Project Innovation
@@ -93,26 +94,14 @@ ladderRatio: the proportion between number of residents on the same floor and nu
 elevator: have ( 1 ) or not have elevator( 0 )<br>
 fiveYearsProperty: if the owner have the property for less than 5 years.<br>
 
-### 3. Generic Flow Of Project
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/18.png)
 
-### 4. EDA
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/1.png)
 #### A.Data Cleaning
 we have 26 columns ,from these we don't want some column(i.e. url,id,cid) then we will perform data cleaning wich involve following steps. our target variable is totalPrice<br>
 a. Impute/Remove missing values or Null values (NaN)<br>
 b. Remove unnecessary and corrupted data.<br>
 c. Date/Text parsing if required.
 
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/2.png)<br>
-we handle NAN value using appropriate solutions.
 
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/3.png)<br>
-DOM Column have more than 50% value are missing it's better to delete that column
-
-
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/4.png)<br>
-some column have unique character. we solve these problem using split method and create seprate column for unique character.<br>
 
 We also have a categorical data we handle such kind of data using dummies variable concept. following are the columns which have categorical data.<br>
 a. renovationCondition<br>
@@ -122,39 +111,12 @@ d. district<br>
 e. elevator<br>
 f. floor_type
 
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/5.png)<br>
-Summary of the Heat-Map<br>
-a. totalPrice is highly corellated with community average,square,bathroom,livingroom and Trde Time.<br>
-b. totalprice is highly negative corellated with ladderRatio,lat and lng.
-
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/6.png)<br>
-Summary of the Density Plot<br>
-a. most of the output features is lies between 0-2500
-
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/7.png)<br>
-Summary of Scatterplot<br>
-a. Most of the House Followers 0-400.
-
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/8.png)<br>
-Summery of Scatterplot with respect to renovationCondition<br>
-a. most of the expensive houses have HardCover as a renovation condition
-
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/9.png)<br>
-Summary of lineplot<br>
-a. Most of the peoples average are lies in 12500-150000 ...
-
-#### B. Feature Engineering
-we found outlier in our data ..
-
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/10.png)<br>
-from the above figure we can notice that we have an outlier present in our dataset.<br>
-for outlier we can use IQR method and after using IQR method.Now, our data looks fine.
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/11.png)
 
 
 
-using the feature engineering we got out top 30 features with respect to totalPrice .
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/12.png)
+
+
+
 
 So,these are the top 20 features for our model<br>
 a. tradeTime<br>
@@ -173,8 +135,7 @@ k. Followers
 Normalization (min-max Normalization)<br>
 In this approach we scale down the feature in between 0 to 1
 
-we have numerical column where we can apply min-max Normalization.<br>
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/13.png)
+
 
 ### 5. Choosing Best ML Model
 List of the model that we can use for our problem<br>
@@ -184,11 +145,7 @@ c. Decesion Tree<br>
 d. Random Forest
 
 
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/14.png)<br>
-Using the linearRegression we got only 75 % accuracy.
 
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/15.png)<br>
-Using the Random Forest we got 98 % accuracy on train data and 89 % on test data .so,we can consider RandomForest as a  Best Algorithm for this problem.
 
 
 ### 6. Model Creation
@@ -210,14 +167,9 @@ b. criterion--->{"mse", "mae"}-->The function to measure the quality of a split<
 c. max_features--->{"auto", "sqrt", "log2"}-->    The number of features to consider when looking for the best split:
 
 
-So, After Hyperparameter Tuning we got 90 % accuracy on test data and 94 % accuracy on train data. 
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/16.png)<br>
-Now,Accuracy of model seems to be very good .so we can save the model using pickle. 
 
 
-### 7. Model Deployment
-After creating model ,we integrate that model with beautiful UI. for the UI part we used HTML,CSS,JS and Flask.
-![](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/17.png)
+
 
 ### 8. Model Conclusion
 
@@ -242,8 +194,6 @@ a. we will work on mobile application<br>
 b. we will reduce the size of model using PCA .
 
 
-### 11. Working Project Video
-![Working Projecct](https://github.com/bibek376/Housing_Price_Prediction/blob/master/Picture_For_README/1_Video.gif)
 
 
 
